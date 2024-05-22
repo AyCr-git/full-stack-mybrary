@@ -1,6 +1,6 @@
 <div>
     <label>Title</label>
-    <input type="text", name="title" value="<%= book.title %>">
+    <input type="text" name="title" value="<%= book.title %>">
 </div>
 
 <div>
@@ -19,19 +19,19 @@
 
 <div>
     <label>Publish Date</label>
-    <input type="date", name="publishDate" 
+    <input type="date" name="publishDate" 
         value="<%= book.publishDate == null ? '' 
         : book.publishDate.toISOString().split('T')[0] %>">
 </div>
 
 <div>
     <label>Page Count</label>
-    <input type="number", name="pageCount" min="1" value="<%= book.pageCount %>">
+    <input type="number" name="pageCount" min="1" value="<%= book.pageCount %>">
 </div>
 
 <div>
     <label>Cover</label>
-    <input type="file", name="cover" value="<%= book.pageCount %>">
+    <input type="file" name="cover" class="filepond">
 </div>
 
 <div>
