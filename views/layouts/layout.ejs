@@ -12,14 +12,19 @@
     <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
     <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
     
-    
+    <link rel="stylesheet" href="/stylesheets/main.css">
+
     <title>Full Stack Title</title>
 </head>
 <body>
 
-    <%- include('../partials/header.ejs') %>
-    <%- include('../partials/errorMessage.ejs') %>
-    <%- body %>
+    <div class="container">
+        <%- include('../partials/header.ejs') %>
+        <div class="inner-container">
+            <%- include('../partials/errorMessage.ejs') %>
+            <%- body %>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
     <script>
