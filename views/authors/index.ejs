@@ -15,16 +15,12 @@
     <br>
 
     <% authors.forEach(author => { %>
-        <div class="form-row">
-            <div><%= author.name %></div>
-        </div>
-        <div class="form-row form-row-end">
-            <div class="form-item">
-                <di class="btn-row">
-                    <a class="btn btn-primary" href="/authors/<%= author.id %>">View</a>
-                    <a class="btn btn-primary" href="/authors/<%= author.id %>/edit">Edit</a>
-                    <%- include('../partials/deleteForm', { url: `/authors/${author.id}`}) %>
-                </div>
+        <div class="author-row"> 
+            <div class="author-name"><%= author.name %></div>
+            <di class="btn-row">
+                <a class="btn btn-primary" href="/authors/<%= author.id %>">View</a>
+                <a class="btn btn-primary" href="/authors/<%= author.id %>/edit">Edit</a>
+                <%- include('../partials/deleteForm', { url: `/authors/${author.id}`}) %>
             </div>
         </div>
     <% }) %>

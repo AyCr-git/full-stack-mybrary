@@ -1,0 +1,9 @@
+.author-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.author-name {
+    font-size: 1rem;
+}

@@ -1,20 +1,24 @@
 
 <h2 class="page-title"><%= book.title %></h2>
-<div class="form-row">
-    <div class="form-item no-grow">
-        <img height="150px" width="100px" style="object-fit:cover" src="<%= book.coverImagePath %>">
+<div class="book-details">
+    <div>
+        <img class="book-cover" src="<%= book.coverImagePath %>">
+        <div class="book-details-btn-grid">
+            <a class="btn btn-primary" href="/books/<%= book.id %>/edit">Edit</a>
+            <%- include('../partials/deleteForm', { url: `/books/${book.id}`}) %>
+            <a class="btn btn-primary book-details-author-btn" href="/authors/<%= book.author.id %>">View Author</a>
+        </div>
     </div>
 
-    <div class="form-item">
-        <div >Author: <%= book.author.name %></div>
-        <div>Publish Date: <%= book.publishDate %></div>
-        <div>Page Count: <%= book.pageCount %></div>
-        <div>Description: <%= book.description %></div>
+    <div class="book-details-grid">
+        <div class="book-details-label">Author:</div>
+        <div><%= book.author.name %></div>
+        <div class="book-details-label">Publish Date:</div>
+        <div><%= book.publishDate %></div>
+        <div class="book-details-label">Page Count:</div>
+        <div><%= book.pageCount %></div>
+        <div class="book-details-label">Description:</div>
+        <div><%= book.description %></div>
     </div>
-</div>
-
-<div class="form-row form-row-end btn-row">
-    <a class="btn btn-primary" href="/books/<%= book.id %>/edit">Edit</a>
-    <%- include('../partials/deleteForm', { url: `/books/${book.id}`}) %>
-    <a class="btn btn-primary" href="/authors/<%= book.author.id %>">View Author</a>
+    
 </div>
